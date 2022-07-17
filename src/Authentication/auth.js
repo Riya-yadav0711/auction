@@ -15,7 +15,7 @@ module.exports = auth = (Permission) => (req, res, next) => {
       const token = req.headers.authorization.split(" ")[1];
       if (token.includes("Bearer")) {
         res.status(401).json({
-          error: "token cannot starts with Bearer",
+          error: "token can not start with Bearer",
         });
       }
 
